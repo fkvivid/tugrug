@@ -1,1 +1,13 @@
-// css//
+#homemenu {
+	width: 100%;
+	
+}
+#home,#about,#contact {
+	display: inline-block;
+	width: 100px;
+	background-color: lightblue;
+	padding: 20px;
+}
+#divtable {
+	
+}

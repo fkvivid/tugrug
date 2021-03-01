@@ -46,46 +46,38 @@
 			<div id="hansh">
 				<table>
 			<tr>
-				<div><b>Монгол Төгрөгийн Ханш</b></div>
+				<div id="hansh2"><b>Монгол Төгрөгийн Ханш</b></div>
 			</tr>
 			<tr>
-				<td><img src="photos/mnt.png"></td>
-				<td><b>MNT Монгол Төгрөг</b></td>
-				<td><b><span id="mnt"></span></span></td>
+				<td><img src="photos/mnt.png"><b>MNT Монгол Төгрөг</b></td>
+				<td><b><span  id="mnt">  1₮ = </span></span></td>
 			</tr>
 			<tr>
-				<td><img src="photos/usd.png"></td>
-				<td>АНУ доллар</td>
+				<td><img src="photos/usd.png">АНУ доллар</td>
 				<td><span id="usd"></span></td>
 			</tr>
 			<tr>
-				<td><img src="photos/eur.png"></td>
-				<td>Евро</td>
-				<td><span></span></td>
+				<td><img src="photos/eur.png">Евро</td>
+				<td><span id="eur"></span></td>
 			</tr>
 			<tr>
-				<td><img src="photos/jpy.png"></td>
-				<td>Японы иен</td>
+				<td><img src="photos/jpy.png">Японы иен</td>
 				<td><span id="jpy"></span></td>
 			</tr>
 			<tr>
-				<td><img src="photos/rub.png"></td>
-				<td>ОХУ-ын рубль</td>
+				<td><img src="photos/rub.png">ОХУ-ын рубль</td>
 				<td><span id="rub"></span></td>
 			</tr>
 			<tr>
-				<td><img src="photos/cny.png"></td>
-				<td>БНХАУ-ын юань</td>
+				<td><img src="photos/cny.png">БНХАУ-ын юань</td>
 				<td><span id="cny"></span></td>
 			</tr>
 			<tr>
-				<td><img src="photos/krw.png"></td>
-				<td>БНСУ-ын вон</td>
+				<td><img src="photos/krw.png">БНСУ-ын вон</td>
 				<td><span id="krw"></span></td>
 			</tr>
 			<tr>
-				<td><img src="photos/aud.png"></td>
-				<td>Австралийн доллар</td>
+				<td><img src="photos/aud.png">Австралийн доллар</td>
 				<td><span id="aud"></span></td>
 			</tr>
 			
@@ -134,16 +126,18 @@
 		</footer>
 
 		<script type="text/javascript">
-			var gurl='https://api.exchangeratesapi.io/latest'
+			var gurl='http://www.floatrates.com/daily/mnt.json'
 			$.getJSON(gurl, function(data){
 				console.log("inside")
 				console.log(data)
-				document.getElementById('aud').innerHTML = data.rates.AUD;
-				document.getElementById('usd').innerHTML = data.rates.USD;
-				document.getElementById('jpy').innerHTML = data.rates.JPY;
-				document.getElementById('cny').innerHTML = data.rates.CNY;
-				document.getElementById('rub').innerHTML = data.rates.RUB;
-				document.getElementById('krw').innerHTML = data.rates.KRW;
+				
+				document.getElementById('usd').innerHTML = data.usd.rate;
+				document.getElementById('eur').innerHTML = data.eur.rate;
+				document.getElementById('jpy').innerHTML = data.jpy.rate;
+				document.getElementById('cny').innerHTML = data.cny.rate;
+				document.getElementById('krw').innerHTML = data.krw.rate;
+				document.getElementById('rub').innerHTML = data.rub.rate;
+				document.getElementById('aud').innerHTML = data.aud.rate;
 				
 				
 			});

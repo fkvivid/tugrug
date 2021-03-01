@@ -206,19 +206,25 @@ article#main1{
 	}
 }
 #hansh {
-	
+	text-align: left;
 	
 }
 td {
 	border: 1px solid;
 }
 #sid {
-	background-color: #35424a;
-	padding-left: 700px;
+	background-color: #f4f4f4;
 	height: 300px;
+	text-align: center;
+	border-bottom: 1px solid;
 }
-
-
+table {
+	margin-left: auto;
+	margin-right: auto;
+}
+#hansh2 {
+	text-align: center;
+}
 
 
 

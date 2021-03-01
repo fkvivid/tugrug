@@ -132,6 +132,7 @@ header a:hover{
 /*box*/
 #boxes{
 	margin-top: 20px;
+	display: inline-block;
 }
 
 #boxes .box{
@@ -204,8 +205,19 @@ article#main1{
 		margin-bottom: 5px;
 	}
 }
+#hansh {
+	
+	
+}
+td {
+	border: 1px solid;
+}
+#sid {
+	background-color: #35424a;
+	padding-left: 700px;
+	height: 300px;
+}
 
- 
 
 
 

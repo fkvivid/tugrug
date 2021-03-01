@@ -5,6 +5,7 @@
 		<title>Нүүр хуудас</title>
 		<!-- <link rel="icon" href="photos/flagmongolia.png"> -->
 	    <link rel="stylesheet" type="text/css" href="set.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<header>
@@ -39,6 +40,59 @@
 					<input type="email" placeholder="Enter Email...">
 					<button type="submit" class="button_1">Нэвтрэх</button>
 				</form>  
+			</div>
+		</section>
+		<section id="sid">
+			<div id="hansh">
+				<table>
+			<tr>
+				<div><b>Монгол Төгрөгийн Ханш</b></div>
+			</tr>
+			<tr>
+				<td><img src="photos/mnt.png"></td>
+				<td><b>MNT Монгол Төгрөг</b></td>
+				<td><b><span id="mnt"></span></span></td>
+			</tr>
+			<tr>
+				<td><img src="photos/usd.png"></td>
+				<td>АНУ доллар</td>
+				<td><span id="usd"></span></td>
+			</tr>
+			<tr>
+				<td><img src="photos/eur.png"></td>
+				<td>Евро</td>
+				<td><span></span></td>
+			</tr>
+			<tr>
+				<td><img src="photos/jpy.png"></td>
+				<td>Японы иен</td>
+				<td><span id="jpy"></span></td>
+			</tr>
+			<tr>
+				<td><img src="photos/rub.png"></td>
+				<td>ОХУ-ын рубль</td>
+				<td><span id="rub"></span></td>
+			</tr>
+			<tr>
+				<td><img src="photos/cny.png"></td>
+				<td>БНХАУ-ын юань</td>
+				<td><span id="cny"></span></td>
+			</tr>
+			<tr>
+				<td><img src="photos/krw.png"></td>
+				<td>БНСУ-ын вон</td>
+				<td><span id="krw"></span></td>
+			</tr>
+			<tr>
+				<td><img src="photos/aud.png"></td>
+				<td>Австралийн доллар</td>
+				<td><span id="aud"></span></td>
+			</tr>
+			
+		</table>
+			</div>
+			<div>
+				
 			</div>
 		</section>
 
@@ -79,5 +133,24 @@
 			<p>MNT exchange rate, Copyright &copy; 2021</p>
 		</footer>
 
+		<script type="text/javascript">
+			var gurl='https://api.exchangeratesapi.io/latest'
+			$.getJSON(gurl, function(data){
+				console.log("inside")
+				console.log(data)
+				document.getElementById('aud').innerHTML = data.rates.AUD;
+				document.getElementById('usd').innerHTML = data.rates.USD;
+				document.getElementById('jpy').innerHTML = data.rates.JPY;
+				document.getElementById('cny').innerHTML = data.rates.CNY;
+				document.getElementById('rub').innerHTML = data.rates.RUB;
+				document.getElementById('krw').innerHTML = data.rates.KRW;
+				
+				
+			});
+			
+			
+
+			
+		</script>
 	</body>
 </html>
